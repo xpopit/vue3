@@ -15167,7 +15167,7 @@ Use a v-bind binding combined with a v-on listener that emits update:x event ins
   }
   function genNode(node, context) {
     if (isString(node)) {
-      context.push(node, -3 /* Unknown */);
+      context.push(node, -3 /* Unknown */, node);
       return;
     }
     if (isSymbol(node)) {
@@ -16170,11 +16170,7 @@ Use a v-bind binding combined with a v-on listener that emits update:x event ins
           }
           conditional.alternate = vElse.exp ? createConditionalExpression(
             vElse.exp,
-            buildDynamicSlot(
-              slotName,
-              slotFunction,
-              conditionalBranchIndex++
-            ),
+            buildDynamicSlot(slotName, slotFunction, conditionalBranchIndex++),
             defaultFallback
           ) : buildDynamicSlot(slotName, slotFunction, conditionalBranchIndex++);
         } else {
