@@ -10486,6 +10486,7 @@ Component that was made reactive: `,
   const warn = warn$1 ;
   const ErrorTypeStrings = ErrorTypeStrings$1 ;
   const devtools = devtools$1 ;
+  console.log(devtools);
   const setDevtoolsHook = setDevtoolsHook$1 ;
   const ssrUtils = null;
   const resolveFilter = null;
